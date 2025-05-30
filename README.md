@@ -2,16 +2,16 @@
 
 # 📊 Desafio: Análise de Evasão de Clientes (Churn) na Telecom X
 
-## 🔍 Introdução
+### 🔍 Introdução
 
 A evasão de clientes é um problema crítico para empresas de telecomunicações. Manter os clientes satisfeitos e engajados é economicamente mais viável do que buscar constantemente novos assinantes. Diante disso, este projeto tem como objetivo analisar os dados dos clientes da Telecom X , identificar padrões relacionados ao cancelamento de serviços (também conhecido como *Churn* ) e extrair insights úteis para estratégias de retenção.
 
-## Objetivo:
+### Objetivo:
 Entender o comportamento dos clientes que cancelam o serviço.
 Identificar fatores associados à evasão.
 Oferecer recomendações baseadas em dados para reduzir a taxa de Churn.
 
-## 🧹 1. Importação, Limpeza e Tratamento de Dados
+### 🧹 1. Importação, Limpeza e Tratamento de Dados
 ⬇️ Fonte dos dados
 
 Os dados foram obtidos diretamente de uma API pública fornecida no desafio:
@@ -20,10 +20,10 @@ https://raw.githubusercontent.com/ingridcristh/challenge2-data-science/refs/head
 
 O dataset contém informações sobre clientes da Telecom X, incluindo dados demográficos, tipo de serviço contratado e status de cancelamento (Churn).
 
-## Estrutura dos dados
+### Estrutura dos dados
 O JSON recebido era aninhado, ou seja, continha dicionários dentro de dicionários. Para facilitar a análise, utilizamos pandas.json_normalize para transformar os dados em um DataFrame plano.
 
-## Limpeza de dados
+### Limpeza de dados
 Realizei as seguintes etapas de limpeza:
 
 1. Padronização de categorias : Valores como "Yes", "No", "yes", "1" e "0" foram padronizados para "Yes" e "No".
@@ -33,9 +33,9 @@ Realizei as seguintes etapas de limpeza:
 5. Criação de nova coluna : Gerei a coluna Valor_Diario, calculando o valor médio diário pago pelo cliente (Valor_Mensal / 30).
 7. Renomeação de colunas : Adotei nomes mais claros e compreensíveis para facilitar a interpretação por stakeholders não técnicos.
 
-## 🔍 2. Análise Exploratória de Dados (EDA)
+### 🔍 2. Análise Exploratória de Dados (EDA)
 
-## 📊 Distribuição do *Churn*
+### 📊 Distribuição do *Churn*
 Comecei analisando a distribuição geral do *Churn*:
 > Não	73.46%, > Sim	26.54%
 
@@ -52,7 +52,7 @@ plt.show()
 
 ![image](https://github.com/user-attachments/assets/75571cf0-6ae9-4f54-b8bc-a8306bac358e)
 
-## 📈 Análise por Variáveis Categóricas
+### 📈 Análise por Variáveis Categóricas
 Explorei como o Churn se distribui entre diferentes categorias:
 
 **Clientes com contrato mês a mês têm maior taxa de cancelamento** .
@@ -68,7 +68,7 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/b2f66dd6-4037-4932-8cf2-39929d59e29f)
 
 
-## 📉 Análise por Variáveis Numéricas
+### 📉 Análise por Variáveis Numéricas
 
 Também explorei como o cancelamento se relaciona com variáveis numéricas, como:
 
@@ -88,7 +88,7 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/923c5382-5e51-406c-94ca-97c6a1265be6)
 
 
-## 💡 3. Conclusões e Insights
+### 💡 3. Conclusões e Insights
 
 ## Principais Achados:
 1 - Taxa de *Churn* alta : Cerca de 26,5% dos clientes cancelaram o serviço.
@@ -99,10 +99,10 @@ plt.show()
 6 - Forma de pagamento importa : Clientes que usam cheques como forma de pagamento têm maior taxa de evasão.
 
 
-## 📌 4. Recomendações
+### 📌 4. Recomendações
 Com base nos insights obtidos, apresento algumas recomendações estratégicas:
 
-## ✅ Para Reduzir o *Churn*:
+### ✅ Para Reduzir o *Churn*:
 
 1. Incentivar contratos fixos : Ofereça benefícios ou descontos para clientes que optarem por contratos anuais ou bienais.
 2. Melhorar oferta de serviços adicionais : Promova pacotes com suporte técnico e backup online como diferenciais.
